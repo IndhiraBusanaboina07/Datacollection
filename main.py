@@ -26,7 +26,8 @@ client1.subscribe('sacet/a11')
 def notification(client1,userdata,msg):
     k = msg.payload
     k = k.decode('UTF-8')
-    client.publish('aws/a11',k)
+    print(k)
+    client.publish('aws/a11',k,0)
 
 client1.on_message = notification
 client1.loop_forever()
