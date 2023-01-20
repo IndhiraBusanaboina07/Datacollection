@@ -4,7 +4,7 @@ import paho.mqtt.client as mqtt
 
 client = AWSIoTMQTTClient("A11")
 client.configureEndpoint('a2028t9m0qzx3l-ats.iot.us-east-1.amazonaws.com',8883)
-client.configureCredentials('AmazonRootCA1.pem','device-private.pem.key','device-certificate.pem.crt')
+client.configureCredentials('/home/ubuntu/Datacollection/AmazonRootCA1.pem','/home/ubuntu/Datacollection/device-private.pem.key','/home/ubuntu/Datacollection/device-certificate.pem.crt')
 
 client.configureOfflinePublishQueueing(-1)
 client.configureDrainingFrequency(2)
